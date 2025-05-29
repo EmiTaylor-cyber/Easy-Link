@@ -426,9 +426,9 @@ function createBackgroundSlider(container) {
     
     // Create slides with different background images
     const images = [
-        '../images/bg-slide-1.jpg',
-        '../images/bg-slide-2.jpg',
-        '../images/bg-slide-3.jpg'
+        '../images/fan1.jpg',
+        '../images/fan2.jpg',
+        '../images/fan3.jpg'
     ];
     
     images.forEach((image, index) => {
@@ -460,15 +460,15 @@ function createQuoteSlider(container) {
     const quotes = [
         {
             text: "Connectivity is the foundation of progress in the digital age.",
-            author: "— Easy Link Team"
+            author: "Easy Link Team"
         },
         {
             text: "Bringing communities together through affordable internet access.",
-            author: "— Our Mission"
+            author: "Our Mission"
         },
         {
             text: "The internet is not a luxury, it's a necessity for modern life.",
-            author: "— Our Vision"
+            author: "Our Vision"
         }
     ];
     
