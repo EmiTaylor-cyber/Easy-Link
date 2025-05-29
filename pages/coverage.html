@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coverage Map - Easy Link Wi-Fi</title>
+    <meta name="description" content="View Easy Link Wi-Fi hotspot coverage areas in Arua City. Find the nearest hotspot location and check upcoming expansion zones.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>Easy<span>Link</span></h1>
+                </a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="connect.html">How to Connect</a></li>
+                    <li><a href="coverage.html" class="active">Coverage</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="partner.html">Become a Partner</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header Section -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-aos="fade-up">Coverage Map</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Find Easy Link Hotspots in Arua City</p>
+        </div>
+    </section>
+
+    <!-- Coverage Introduction -->
+    <section class="coverage-intro">
+        <div class="container">
+            <div class="intro-content" data-aos="fade-up">
+                <h2>Our Growing Network</h2>
+                <p>Easy Link is continuously expanding its coverage across Arua City to provide reliable internet access where you need it. Our hotspots are strategically placed in high-traffic areas, business centers, and educational institutions to ensure maximum accessibility.</p>
+                <p>Check the map below to find the nearest Easy Link hotspot in your area. We're constantly adding new locations, so be sure to check back regularly for updates!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="coverage-map">
+        <div class="container">
+            <div class="map-container" data-aos="fade-up">
+                <div id="coverage-map" style="height: 500px; width: 100%; border-radius: 10px;"></div>
+            </div>
+            <div class="map-legend" data-aos="fade-up">
+                <div class="legend-item">
+                    <span class="legend-icon active"></span>
+                    <span class="legend-text">Active Hotspot</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-icon coming-soon"></span>
+                    <span class="legend-text">Coming Soon</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-icon coverage-area"></span>
+                    <span class="legend-text">Coverage Area (Approx. 100m radius)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotspot Locations List -->
+    <section class="hotspot-locations">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Hotspot Locations</h2>
+            
+            <div class="locations-tabs" data-aos="fade-up">
+                <button class="tab-btn active" data-tab="active">Active Hotspots</button>
+                <button class="tab-btn" data-tab="coming-soon">Coming Soon</button>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Active Hotspots Tab -->
+                <div class="tab-pane active" id="active-tab">
+                    <div class="locations-grid">
+                        <!-- Location 1 -->
+                        <div class="location-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="location-icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="location-details">
+                                <h3>Arua Primary School Area</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Near the main entrance</p>
+                                <p><i class="fas fa-signal"></i> Strong signal strength</p>
+                                <p><i class="fas fa-users"></i> High capacity</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Location 2 -->
+                        <div class="location-card" data-aos="fade-up" data-aos-delay="150">
+                            <div class="location-icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="location-details">
+                                <h3>Arua Central Market</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Main market square</p>
+                                <p><i class="fas fa-signal"></i> Medium signal strength</p>
+                                <p><i class="fas fa-users"></i> Very high capacity</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Location 3 -->
+                        <div class="location-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="location-icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="location-details">
+                                <h3>Mvara Trading Center</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Near Easy Link office</p>
+                                <p><i class="fas fa-signal"></i> Very strong signal strength</p>
+                                <p><i class="fas fa-users"></i> Medium capacity</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Location 4 -->
+                        <div class="location-card" data-aos="fade-up" data-aos-delay="250">
+                            <div class="location-icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="location-details">
+                                <h3>Ediofe Cathedral Area</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Community center</p>
+                                <p><i class="fas fa-signal"></i> Strong signal strength</p>
+                                <p><i class="fas fa-users"></i> Medium capacity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Coming Soon Tab -->
+                <div class="tab-pane" id="coming-soon-tab">
+                    <div class="locations-grid">
+                        <!-- Coming Soon Location 1 -->
+                        <div class="location-card coming-soon-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="location-icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="location-details">
+                                <h3>Arua Hill Shopping Mall</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Food court area</p>
+                                <p><i class="fas fa-calendar-alt"></i> Expected launch: June 2025</p>
+                                <div class="coming-soon-badge">Coming Soon</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Coming Soon Location 2 -->
+                        <div class="location-card coming-soon-card" data-aos="fade-up" data-aos-delay="150">
+                            <div class="location-icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="location-details">
+                                <h3>Arua Bus Terminal</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Main waiting area</p>
+                                <p><i class="fas fa-calendar-alt"></i> Expected launch: July 2025</p>
+                                <div class="coming-soon-badge">Coming Soon</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Coming Soon Location 3 -->
+                        <div class="location-card coming-soon-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="location-icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="location-details">
+                                <h3>Onduparaka Area</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Community center</p>
+                                <p><i class="fas fa-calendar-alt"></i> Expected launch: August 2025</p>
+                                <div class="coming-soon-badge">Coming Soon</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Coming Soon Location 4 -->
+                        <div class="location-card coming-soon-card" data-aos="fade-up" data-aos-delay="250">
+                            <div class="location-icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="location-details">
+                                <h3>Arua Regional Referral Hospital</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Outpatient department</p>
+                                <p><i class="fas fa-calendar-alt"></i> Expected launch: September 2025</p>
+                                <div class="coming-soon-badge">Coming Soon</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage FAQ Section -->
+    <section class="coverage-faq">
+        <div class="container">
+            <div class="faq-content" data-aos="fade-up">
+                <h2>Coverage FAQs</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>What is the typical range of an Easy Link hotspot?</h3>
+                            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Each Easy Link hotspot typically provides reliable coverage within a 100-meter radius in open areas. However, actual coverage may vary depending on physical obstacles, building materials, and other environmental factors. For best performance, we recommend staying within 50 meters of a hotspot.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How can I request a new hotspot in my area?</h3>
+                            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>We're always looking to expand our network! If you'd like to request a hotspot in your area, please contact us through our <a href="contact.html">contact form</a> or speak with one of our agents. Business owners can also explore our <a href="partner.html">partnership program</a> to become a hotspot host.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Can I use my Easy Link voucher at any hotspot location?</h3>
+                            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Yes! Your Easy Link voucher works at any of our hotspot locations throughout Arua City. Once activated, you can move between different hotspots within our network during your active session without needing to log in again.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How often do you add new hotspot locations?</h3>
+                            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>We aim to add new hotspot locations monthly, focusing on areas with high demand and community needs. Our expansion plans are guided by user requests, population density, and strategic partnerships with local businesses. Check our <a href="news.html">News page</a> for announcements about new locations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Can't Find a Hotspot Near You?</h2>
+                <p>Help us expand our network by becoming a partner or suggesting new locations for Easy Link hotspots.</p>
+                <div class="cta-buttons">
+                    <a href="partner.html" class="btn btn-primary">Become a Partner</a>
+                    <a href="contact.html" class="btn btn-secondary">Suggest a Location</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Easy<span>Link</span></h2>
+                    <p>Your Connection to the World</p>
+                </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="packages.html">Packages</a></li>
+                            <li><a href="coverage.html">Coverage</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="connect.html">How to Connect</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Info</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <a href="https://www.google.com/maps?=Arua+City,+Uganda" target="_blank">Arua City, Uganda</a> 
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel: +256775330283">+256-775-33-0283</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-whatsapp"></i> 
+                                <a href="https://wa.me/256727231523">+256-727-231523</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:emmazwanizkidtelvionz@gmail.com">easylinkhopspot@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/groups/1205288387453555/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/emitaylorb52?igsh=YzljYTk1ODg3Zg==" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://chat.whatsapp.com/KdJjWiNany0IyvmS83LiBn" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Easy Link. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/coverage-map.js"></script>
+</body>
+</html>
