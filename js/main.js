@@ -426,9 +426,9 @@ function createBackgroundSlider(container) {
     
     // Create slides with different background images
     const images = [
-        '../images/fan1.jpg',
-        '../images/fan2.jpg',
-        '../images/fan3.jpg'
+        '../images/background.jpg',
+        '../images/background.jpg',
+        '../images/background.jpg'
     ];
     
     images.forEach((image, index) => {
