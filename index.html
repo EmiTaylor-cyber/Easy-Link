@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Link - Your Connection to the World</title>
+    <title>Gallery - Easy Link Wi-Fi</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Easy Link provides affordable Wi-Fi hotspot services in Arua City, Uganda. Connect anywhere with flexible packages starting from UGX 1,000.">
-    <meta name="keywords" content="Wi-Fi, internet, hotspot, Arua, Uganda, affordable internet, Easy Link">
+    <meta name="description" content="Explore Easy Link's gallery showcasing our Wi-Fi hotspots, community impact, and network coverage across Arua City, Uganda.">
+    <meta name="keywords" content="Easy Link gallery, Arua Wi-Fi photos, Uganda internet, community Wi-Fi images, hotspot locations">
     <meta name="author" content="Easy Link">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://easylink.ug/">
-    <meta property="og:title" content="Easy Link - Your Connection to the World">
-    <meta property="og:description" content="Affordable Wi-Fi hotspot services in Arua City, Uganda. Connect anywhere with Easy Link.">
+    <meta property="og:url" content="https://easylink.ug/gallery.html">
+    <meta property="og:title" content="Gallery - Easy Link Wi-Fi">
+    <meta property="og:description" content="Explore Easy Link's gallery showcasing our Wi-Fi hotspots, community impact, and network coverage across Arua City, Uganda.">
     <meta property="og:image" content="images/og-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://easylink.ug/">
-    <meta property="twitter:title" content="Easy Link - Your Connection to the World">
-    <meta property="twitter:description" content="Affordable Wi-Fi hotspot services in Arua City, Uganda. Connect anywhere with Easy Link.">
+    <meta property="twitter:url" content="https://easylink.ug/gallery.html">
+    <meta property="twitter:title" content="Gallery - Easy Link Wi-Fi">
+    <meta property="twitter:description" content="Explore Easy Link's gallery showcasing our Wi-Fi hotspots, community impact, and network coverage across Arua City, Uganda.">
     <meta property="twitter:image" content="images/og-image.jpg">
     
     <!-- Favicon -->
@@ -34,10 +34,12 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lightbox for gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 <body>
     <!-- Header Section -->
-    <header>
+    <header class="enhanced-header">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
@@ -65,23 +67,41 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Page Header Section with Dynamic Background -->
+    <section class="page-header gallery-header">
+        <div class="background-slider">
+            <div class="slide active" style="background-image: url('images/background.jpg')"></div>
+            <div class="slide" style="background-image: url('images/techteam.jpg')"></div>
+            <div class="slide" style="background-image: url('images/ceo.jpeg')"></div>
+        </div>
         <div class="container">
-            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-                <h2>Affordable Wi-Fi in Arua</h2>
-                <h3>Powered by Easy Link</h3>
-                <p>Fast, reliable internet access when you need it, where you need it.</p>
-                <div class="cta-buttons">
-                    <a href="packages.html" class="btn btn-primary">See Packages</a>
-                    <a href="coverage.html" class="btn btn-secondary">Find Coverage</a>
-                    <a href="partner.html" class="btn btn-outline">Become a Reseller</a>
+            <h1 data-aos="fade-up">Affordable Wi-Fi in Arua</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Powered By <span>Easy Link</span></p>
+            <p></p>
+            <div class="quote-slider">
+                <div class="quote active" data-aos="fade-up" data-aos-delay="200">
+                    <p>Fast, reliable internet access when you need it, where you need it.</p>
+                    <cite>Tay Tech Developers</cite>
                 </div>
+                <div class="quote" data-aos="fade-up" data-aos-delay="200">
+                    <p>The internet is becoming the town square for the global village of tomorrow.</p>
+                    <cite>Easy<span>Link</span></cite>
+                </div>
+                <div class="quote" data-aos="fade-up" data-aos-delay="200">
+                    <p>Information is the oxygen of the modern age.</p>
+                    <cite>Arua City Connect</cite>
+                </div>
+            </div>
+            <br>
+            <div class="cta-buttons">
+                <a href="packages.html" class="btn btn-primary">See Packages</a>
+                <a href="coverage.html" class="btn btn-secondary">Find Coverage</a>
+                <a href="partner.html" class="btn btn-outline">Become a Reseller</a>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
+     <!-- Features Section -->
     <section class="features">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Why Choose Easy Link?</h2>
@@ -199,48 +219,43 @@
 
     <!-- Testimonials Section -->
     <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">What Our Customers Say</h2>
-            <div class="testimonial-slider" data-aos="fade-up">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>Easy Link has transformed how I access the internet in Arua. The weekly package is perfect for my studies!</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <h4>Sarah N.</h4>
-                        <p>Student, Arua</p>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>As a small business owner, I rely on Easy Link for my daily operations. Their customer service is exceptional.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <h4>John M.</h4>
-                        <p>Shop Owner, Arua City</p>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>The coverage around Arua Primary School is excellent. I can now work from different locations without worrying about connectivity.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <h4>David K.</h4>
-                        <p>Freelancer, Arua</p>
-                    </div>
-                </div>
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">What Our Customers Say</h2>
+
+        <div class="testimonial-grid" data-aos="fade-up">
+        <div class="testimonial">
+            <div class="testimonial-content">
+            <p>Easy Link has transformed how I access the internet in Arua. The weekly package is perfect for my studies!</p>
             </div>
-            <div class="slider-controls">
-                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-                <div class="slider-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="testimonial-author">
+            <h4>Sarah N.</h4>
+            <p>Student, Arua</p>
             </div>
         </div>
+
+        <div class="testimonial">
+            <div class="testimonial-content">
+            <p>As a small business owner, I rely on Easy Link for my daily operations. Their customer service is exceptional.</p>
+            </div>
+            <div class="testimonial-author">
+            <h4>Bagu M.</h4>
+            <p>Shop Owner, Arua City</p>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-content">
+            <p>The coverage around Arua Primary School is excellent. I can now work from different locations without worrying about connectivity.</p>
+            </div>
+            <div class="testimonial-author">
+            <h4>Mambo K.</h4>
+            <p>Freelancer, Arua</p>
+            </div>
+        </div>
+        </div>
+    </div>
     </section>
+
 
     <!-- Call to Action Section -->
     <section class="cta-section">
@@ -307,7 +322,7 @@
                         <div class="social-links">
                             <a href="https://www.facebook.com/groups/1205288387453555/" class="social-link"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.instagram.com/emitaylorb52?igsh=YzljYTk1ODg3Zg==" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="Follow this link to join my WhatsApp group: https://chat.whatsapp.com/KdJjWiNany0IyvmS83LiBn" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://chat.whatsapp.com/KdJjWiNany0IyvmS83LiBn" class="social-link"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
             </div>
@@ -320,6 +335,8 @@
 
     <!-- JavaScript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 </html>
