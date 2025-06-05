@@ -38,7 +38,7 @@ EasyLink/
 ├── images/                 # Image assets
 │   ├── favicon.svg         # Website favicon
 │   └── ...                 # Other images
-└── pages/                  # Additional HTML pages
+└──                   # Additional HTML pages
     ├── about.html
     ├── packages.html
     ├── connect.html

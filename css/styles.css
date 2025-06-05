@@ -360,7 +360,7 @@ header .container {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero-bg.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -754,7 +754,7 @@ header .container {
 /* ===== CTA SECTION ===== */
 .cta-section {
   padding: var(--spacing-xxl) 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/cta-bg.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/cta-bg.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -954,7 +954,7 @@ footer {
 
 /* ===== PAGE HEADER ===== */
 .page-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/page-header-bg.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/page-header-bg.jpg');
   background-size: cover;
   background-position: center;
   color: white;
