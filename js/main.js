@@ -460,7 +460,8 @@ function createQuoteSlider(container) {
     const quotes = [
         {
             text: "Connectivity is the foundation of progress in the digital age.",
-            author: "Easy Link Team"
+            author: "EasyLink Team"
+            
         },
         {
             text: "Bringing communities together through affordable internet access.",
