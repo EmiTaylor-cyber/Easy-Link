@@ -110,21 +110,65 @@
             <div class="mission-vision" data-aos="fade-up">
                 <div class="mission">
                     <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
-                    <p>To provide affordable, reliable, and community-first Wi-Fi access throughout Arua City, ensuring everyone has the opportunity to connect, learn, and grow.</p>
+                    <p>To provide affordable, reliable, and community-first Wi-Fi access throughout Arua City, ensuring everyone has the opportunity 
+                        to connect, learn, and grow.</p>
                 </div>
                 <div class="vision">
                     <h3><i class="fas fa-eye"></i> Our Vision</h3>
-                    <p>To expand quality internet access across Northern Uganda, becoming a leading force in digital inclusion and community empowerment through connectivity.</p>
+                    <p>To expand quality internet access across Northern Uganda, becoming a leading force in digital inclusion and community empowerment 
+                        through connectivity.</p>
+                </div>
+                <div class="mission">
+                    <h3><i class="fas fa-thumbs-up"></i> Our Core Values</h3>
+                    <p><ul>
+                            <li><i class="fas fa-check-circle"></i> <strong>Community Focused:</strong> We prioritize the needs of our local community in everything we do.</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Integrity:</strong> We operate with transparency and honesty, building trust with our users and partners.</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Innovation:</strong> We embrace new technologies and ideas to continuously improve our services.</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Sustainability:</strong> We are committed to environmentally friendly practices in our operations.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="vision">
+                    <h3><i class="fas fa-flag-checkered"></i> Our Goals</h3>
+                    <p>We aim to:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Expand our network to cover more areas in Arua and beyond.</li>
+                        <li><i class="fas fa-check"></i> Enhance user experience with faster speeds and better connectivity.</li>
+                        <li><i class="fas fa-check"></i> Foster partnerships with local businesses and organizations to promote digital literacy.</li>
+                        <li><i class="fas fa-check"></i> Innovate our service offerings to meet the evolving needs of our users.</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="founder-story" data-aos="fade-up">
-                <h2><span><span style="color: rgb(103, 184, 224); font-weight: bold; text-align: center;">Emmanuel</span><span style="color: rgb(22, 240, 55); font-weight: bold; text-align: center;"> Wani</span></span></h2>
+                <h2>
+                    <span>
+                        <span style="color: rgb(103, 184, 224); font-weight: bold; text-align: center;">Emmanuel</span>
+                        <span style="color: rgb(22, 240, 55); font-weight: bold; text-align: center;"> Wani</span>
+                    </span>
+                </h2>
                 <img src="../images/ceo1.jpg" alt="Emmanuel Wani Bongo Julius" class="founder-image" style="border-radius: 10%;"><br>
                 <h2>Our Story</h2>
-                <p>EasyLink was founded by <strong>Emmanuel Wani Bongo Julius</strong>, a passionate entrepreneur with a deep understanding of the connectivity challenges faced by the Arua community. Witnessing the high costs and limited availability of reliable internet, Emmanuel envisioned a solution that was both affordable and accessible to the average person.</p>
-                <p>Starting with a single hotspot near Arua Primary School, EasyLink was born out of a desire to make a tangible difference. The focus was simple: create a user-friendly system using vouchers that local shops could easily sell, making internet access as common as buying airtime. Through dedication and community support, EasyLink has steadily grown its network and user base, driven by the core belief that connectivity fuels progress.</p>
-                <p>Today, EasyLink continues to expand, guided by its founding principles of affordability, reliability, and community focus. We are proud to be a local business serving the needs of Arua and look forward to connecting more communities in Northern Uganda.</p>
+                <p>EasyLink was founded by <strong>Emmanuel Wani B.J</strong>, a passionate entrepreneur with a deep understanding of the 
+                    connectivity challenges faced by the Arua community. Witnessing the high costs and limited availability of reliable internet, 
+                    Emmanuel envisioned a solution that was both affordable and accessible to the average person.</p>
+                <p>Starting with a single hotspot near Arua Primary School, EasyLink was born out of a desire to make a tangible difference. 
+                    The focus was simple: create a user-friendly system using vouchers that local shops could easily sell, making internet access 
+                    as common as buying airtime. Through dedication and community support, EasyLink has steadily grown its network and user base, 
+                    driven by the core belief that connectivity fuels progress.</p>
+
+                <div id="moreText" style="display: none;">
+                    <p>Emmanuel's commitment to digital equity didn't stop at Arua. He envisioned a broader impact, one that empowers underserved 
+                        areas with tools to bridge the digital divide. This meant training local vendors, partnering with schools, and introducing 
+                        flexible data packages that work for everyone—from students and small businesses to entire families.</p>
+                    <p>Under his leadership, EasyLink has become more than just a Wi-Fi provider—it's a catalyst for digital transformation. Emmanuel's 
+                        ability to blend technical expertise with grassroots insight has enabled EasyLink to become a trusted name in connectivity. 
+                        His journey continues to inspire local entrepreneurs to dream bigger and build solutions tailored to their communities.</p>
+                    <p>As EasyLink expands across Northern Uganda, our mission stays rooted in simplicity, service, and sustainability. We're building 
+                        not just networks, but opportunities—for education, innovation, and economic growth.</p>
+                </div>
+                <button onclick="toggleReadMore()" id="readMoreBtn" style="background-color: #67b8e0; color: white; border: none; 
+                padding: 10px 20px; margin-top: 10px; border-radius: 5px; cursor: pointer;">Read More</button>
             </div>
         </div>
     </section>
@@ -190,7 +234,20 @@
             </div>
         </div>
     </footer>
+    <script>
+                    function toggleReadMore() {
+                        const moreText = document.getElementById("moreText");
+                        const btn = document.getElementById("readMoreBtn");
 
+                        if (moreText.style.display === "none") {
+                            moreText.style.display = "block";
+                            btn.textContent = "Read Less";
+                        } else {
+                            moreText.style.display = "none";
+                            btn.textContent = "Read More";
+                        }
+                    }
+                </script>
     <!-- JavaScript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/main.js"></script>
