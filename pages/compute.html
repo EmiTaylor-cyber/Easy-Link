@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - EasyLink Wi-Fi</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore EasyLink's gallery showcasing our Wi-Fi hotspots, community impact, and network coverage across Arua City, Uganda.">
+    <meta name="keywords" content="EasyLink gallery, Arua Wi-Fi photos, Uganda internet, community Wi-Fi images, hotspot locations">
+    <meta name="author" content="EasyLink">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://easylink.ug/pages/gallery.html">
+    <meta property="og:title" content="Gallery - EasyLink Wi-Fi">
+    <meta property="og:description" content="Explore EasyLink's gallery showcasing our Wi-Fi hotspots, community impact, and network coverage across Arua City, Uganda.">
+    <meta property="og:image" content="../images/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://easylink.ug/pages/gallery.html">
+    <meta property="twitter:title" content="Gallery - EasyLink Wi-Fi">
+    <meta property="twitter:description" content="Explore EasyLink's gallery showcasing our Wi-Fi hotspots, community impact, and network coverage across Arua City, Uganda.">
+    <meta property="twitter:image" content="../images/og-image.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../images/favicon.svg">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lightbox for gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        /* Custom styles for compute.html services section */
+        .services-intro {
+            background-color: #f8f8f8;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        .services-intro h2 {
+            font-size: 2.8em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .services-intro p {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-card .icon {
+            font-size: 3.5em;
+            color: #007bff; /* Primary color for icons */
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .why-choose-us {
+            background-color: #eef7ff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .why-choose-us h2 {
+            font-size: 3em;
+            color: #007bff;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .why-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .why-item .icon {
+            font-size: 2.5em;
+            color: #28a745; /* Success color for why choose us icons */
+            margin-bottom: 15px;
+        }
+
+        .why-item h3 {
+            font-size: 1.6em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .why-item p {
+            font-size: 1.0em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3.2em;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.3em;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #28a745; /* Green for call to action */
+            color: #fff;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .services-intro h2 {
+                font-size: 2.2em;
+            }
+            .services-intro p {
+                font-size: 1em;
+            }
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            .why-choose-us h2 {
+                font-size: 2.5em;
+            }
+            .cta-section h2 {
+                font-size: 2.5em;
+            }
+            .cta-section p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="enhanced-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>Easy<span>Link</span></h1>
+                </a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="connect.html">How to Connect</a></li>
+                    <li><a href="momo.html">MoMo Payment</a></li>
+                    <li><a href="coverage.html">Coverage</a></li>
+                    <li><a href="compute.html" class="active">Computer Services</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="partner.html">Become a Partner</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header Section with Dynamic Background -->
+    <section class="page-header gallery-header">
+        <div class="background-slider">
+            <div class="slide active" style="background-image: url('../images/fan10.jpg')"></div>
+            <div class="slide" style="background-image: url('../images/fan4.jpg')"></div>
+            <div class="slide" style="background-image: url('../images/fan8.jpg')"></div>
+        </div>
+        <div class="container">
+            <h1 data-aos="fade-up"><span><span style="color: rgb(81, 246, 4); font-weight: bold;">Computer</span><span style="color: rgb(255, 255, 255); font-weight: bold;"> Services</span></span></h1>
+            <p data-aos="fade-up" data-aos-delay="100">Empowering Your Digital Journey Through Technology</p>
+            <div class="quote-slider">
+                <div class="quote active" data-aos="fade-up" data-aos-delay="200">
+                    <p>Technology is best when it brings people together.</p>
+                    <cite> Matt Mullenweg</cite>
+                </div>
+                <div class="quote" data-aos="fade-up" data-aos-delay="200">
+                    <p>The internet is becoming the town square for the global village of tomorrow.</p>
+                    <cite> Bill Gates</cite>
+                </div>
+                <div class="quote" data-aos="fade-up" data-aos-delay="200">
+                    <p>Information is the oxygen of the modern age.</p>
+                    <cite> Ronald Reagan</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+ <main>
+        <!-- Services Introduction Section -->
+        <section class="services-intro">
+            <div class="container">
+                <div class="intro-content" data-aos="fade-up">
+                    <h2>Empowering Your Digital Journey with EasyLink</h2>
+                    <p>At EasyLink, we believe in the transformative power of technology. Based in Arua, Uganda, we are dedicated to providing comprehensive computer services and digital skills training to empower individuals and businesses, fostering growth and innovation in our community and beyond. We're here to make technology accessible, understandable, and beneficial for everyone.</p>
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <!-- Computer Services Section -->
+        <section class="main-services">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Our Comprehensive Computer Services</h2>
+                <div class="service-grid">
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="fas fa-tools"></i></div>
+                        <h3>Computer Maintenance</h3>
+                        <p>Keep your devices running smoothly with our expert maintenance services. From hardware checks to software tune-ups, we ensure your computer performs optimally, extending its lifespan and preventing costly issues. We handle everything from dust removal to thermal paste replacement.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class="fas fa-bug"></i></div>
+                        <h3>Software Troubleshooting</h3>
+                        <p>Experiencing glitches, crashes, or slow performance? Our technicians diagnose and resolve all software-related problems efficiently, getting you back to work or play without unnecessary delays. We tackle operating system errors, application conflicts, and more.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon"><i class="fas fa-hdd"></i></div>
+                        <h3>Software Installation & Licensing</h3>
+                        <p>Need new software installed or help with licensing? We provide seamless installation of operating systems, productivity suites, and specialized applications, ensuring proper configuration and legitimate licensing for hassle-free use. We guide you through activation and updates.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon"><i class="fas fa-globe"></i></div>
+                        <h3>Website Creation & Hosting</h3>
+                        <p>Establish your online presence with a professional website. We design and develop modern, responsive websites tailored to your needs, and offer reliable hosting solutions to keep your site accessible 24/7. Perfect for businesses, organizations, and personal brands.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h3>Computer Skills Training</h3>
+                        <p>From basic computer literacy to advanced software proficiency, our training programs are designed for all levels. Learn essential skills to navigate the digital world confidently, whether for personal growth or professional advancement. We offer both one-on-one and group sessions.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="icon"><i class="fas fa-share-alt"></i></div>
+                        <h3>Social Media Marketing for Businesses</h3>
+                        <p>Boost your business visibility and engage with your audience effectively. We help you craft compelling social media strategies, manage your platforms, and create content that resonates, driving growth and customer loyalty. Reach more clients in Arua and beyond.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+                        <div class="icon"><i class="fas fa-camera-retro"></i></div>
+                        <h3>Photography Skills & Adobe Photoshop Training</h3>
+                        <p>Unleash your creative potential! Our courses cover fundamental photography techniques and advanced image editing with Adobe Photoshop, transforming your photos into stunning visual masterpieces. Learn composition, lighting, retouching, and more.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="800">
+                        <div class="icon"><i class="fas fa-video"></i></div>
+                        <h3>Video Editing with Adobe Premiere, CapCut, DaVinci Resolve</h3>
+                        <p>Master the art of video storytelling. We offer training in industry-standard video editing software, enabling you to produce professional-quality videos for personal projects, social media, or business marketing. From basic cuts to complex effects.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="900">
+                        <div class="icon"><i class="fas fa-robot"></i></div>
+                        <h3>AI Mastering & Integration</h3>
+                        <p>Step into the future with Artificial Intelligence. Learn to leverage tools like ChatGPT for content creation, automate workflows, and integrate AI solutions into your daily tasks and business operations for enhanced efficiency and innovation. Discover the power of AI.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="icon"><i class="fas fa-file-word"></i></div>
+                        <h3>Microsoft Office Suite Skills</h3>
+                        <p>Become proficient in essential office applications. Our training covers Word for document creation, Excel for data management, PowerPoint for presentations, and Outlook for effective communication, boosting your productivity in any professional setting.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="1100">
+                        <div class="icon"><i class="fas fa-print"></i></div>
+                        <h3>Printing and Photocopying Services</h3>
+                        <p>Convenient and affordable printing and photocopying services for all your document needs. High-quality prints, various paper sizes, and quick turnaround times for students, businesses, and individuals. We handle both small and large volumes.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="1200">
+                        <div class="icon"><i class="fas fa-file-alt"></i></div>
+                        <h3>CV & Proposal Writing Assistance</h3>
+                        <p>Make a strong impression with professionally crafted CVs and compelling proposals. We provide expert assistance in structuring, writing, and refining your documents to help you secure jobs, grants, or business opportunities. Highlight your strengths effectively.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="1300">
+                        <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+                        <h3>Online Earning Skills Training</h3>
+                        <p>Unlock opportunities for financial independence. Our training equips you with skills for freelancing, remote jobs, and content creation, guiding you on how to earn online and thrive in the global digital economy. Learn to monetize your talents.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="1400">
+                        <div class="icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Digital Literacy for Beginners</h3>
+                        <p>Start your digital journey with confidence. This foundational course covers essential online skills like using email, navigating search engines, filling out online forms, and understanding basic internet safety. Perfect for those new to the digital world.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="1500">
+                        <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Cybersecurity Awareness & Safe Browsing</h3>
+                        <p>Protect yourself and your data online. Learn crucial cybersecurity practices, identify common threats like phishing and malware, and develop safe browsing habits to ensure your digital security and privacy. Stay safe in an interconnected world.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose EasyLink Section -->
+        <section class="why-choose-us">
+            <div class="container">
+                <h2 data-aos="fade-up">Why Choose EasyLink?</h2>
+                <div class="why-items">
+                    <div class="why-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Community-Focused</h3>
+                        <p>We are deeply rooted in the Arua community, understanding local needs and striving to empower youth and businesses through accessible technology.</p>
+                    </div>
+                    <div class="why-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                        <h3>Innovative Solutions</h3>
+                        <p>From cutting-edge AI integration to modern web development, we bring innovative solutions that keep you ahead in the digital landscape.</p>
+                    </div>
+                    <div class="why-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <h3>Expert & Friendly Team</h3>
+                        <p>Our team comprises skilled professionals who are not only experts in their fields but also friendly and dedicated to your success.</p>
+                    </div>
+                    <div class="why-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+                        <h3>Affordable & Accessible</h3>
+                        <p>We are committed to making high-quality technology services and training affordable and accessible to everyone in our region.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Your Experience Section -->
+    <section class="share-experience">
+        <div class="container" style="background-image: url('../images/fan10.jpg'); background-size: cover; background-position: center; border-radius: 20px; padding: 50px 20px;">
+            <div class="experience-content" data-aos="fade-up">
+                <h2>Ready to Transform Your Digital World?</h2>
+                <p style="font-weight: bolder; font-size: 1.0rem; color: #fdffff; border-radius: 2%;">Join the EasyLink family and let us help you navigate the exciting world of technology. Whether you're an individual looking to upskill or a business aiming for digital growth, we have the solutions for you.</p>
+                <div class="share-buttons">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-upload"></i> Get Started Today!</a>
+                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Easy<span>Link</span></h2>
+                    <p>Your Connection to the World</p>
+                </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="packages.html">Packages</a></li>
+                            <li><a href="coverage.html">Coverage</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="connect.html">How to Connect</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Info</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <a href="https://www.google.com/maps?=Arua+City,+Uganda" target="_blank">Arua City, Uganda</a> 
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel: +256775330283">+256-775-33-0283</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-whatsapp"></i> 
+                                <a href="https://wa.me/256727231523">+256-727-231523</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:easylinkhotspot@gmail.com">easylinkhotspot@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/groups/1205288387453555/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/emitaylorb52?igsh=YzljYTk1ODg3Zg==" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://chat.whatsapp.com/KdJjWiNany0IyvmS83LiBn" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+            </div>
+            <div class="footer-bottom">
+                <span style="color: rgb(235, 138, 11);">&copy; 2025 <span><span style="color: rgb(253, 253, 253); font-weight: bold;">Easy</span><span style="color: rgb(25, 241, 237); font-weight: bold;">Link.</span></span> All Rights Reserved.</span>
+                <p>Designed by Emitaylor (TayTech Developers)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/coverage-map.js"></script>
+    <script src="../js/gallery.js"></script>
+</body>
+</html>
+
